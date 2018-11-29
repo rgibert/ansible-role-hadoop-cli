@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts:
+    - all
+  roles:
+    - role: rgibert.hadoop_cli
+      hadoop_cli_jdk_version: "{{ lookup('env', 'MOLECULE_JDK_VERSION') | default('11') }}"
