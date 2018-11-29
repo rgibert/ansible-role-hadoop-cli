@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  role_name: hadoop_cli
+  author: Richard Gibert
+  description: Installs hadoop-cli
+  license: GPLv3
+  min_ansible_version: 1.2
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Ubuntu
+      versions:
+        - artful
+        - bionic
+        - cosmic
+        - trusty
+        - xenial
+  galaxy_tags:
+    - hadoop_cli
+dependencies:
+  - role: rgibert.openjdk_jdk
+    openjdk_jdk_version: '{{ hadoop_cli_jdk_version }}'

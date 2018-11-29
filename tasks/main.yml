@@ -1,0 +1,36 @@
+---
+- block:
+
+    - name: create paths
+      file:
+        state: directory
+        path: '{{ item }}'
+      with_items:
+        - '{{ hadoop_cli_install_path }}'
+        - '/usr/local/bin'
+
+    - name: unpack installer
+      unarchive:
+        remote_src: true
+        creates: '{{ hadoop_cli_unpack_root }}/hadoopcli'
+        src: '{{ hadoop_cli_dl_uri }}'
+        dest: '{{ hadoop_cli_install_path }}'
+        owner: '{{ hadoop_cli_user }}'
+        group: '{{ hadoop_cli_group }}'
+
+    - name: fix shell script
+      replace:
+        path: '{{ hadoop_cli_unpack_root }}/hadoopcli'
+        regexp: '(.*)/usr/local/hadoop-cli/lib/hadoop-cli-full-bin.jar(.*)'
+        replace: '\1{{ hadoop_cli_unpack_root }}/hadoop-cli-full-bin.jar\2'
+
+    - name: link files
+      file:
+        state: link
+        src: '{{ hadoop_cli_unpack_root }}/hadoopcli'
+        dest: '/usr/local/bin/hadoop-cli'
+
+  become: true
+  become_user: root
+  tags:
+    - hadoop-cli

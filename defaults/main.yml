@@ -1,0 +1,9 @@
+---
+hadoop_cli_dl_checksum: sha256:bbdad2b455bf8af3e1bdc62e8e69f41dbf5b86347310d05c7ff3db34ca649bb5
+hadoop_cli_dl_uri: https://github.com/dstreev/hadoop-cli/releases/download/{{ hadoop_cli_version }}.{{ hadoop_cli_hadoop_version }}-bin/hadoop-cli-{{ hadoop_cli_version }}-SNAPSHOT-{{ hadoop_cli_hadoop_version }}.tar.gz
+hadoop_cli_group: root
+hadoop_cli_hadoop_version: 2.7
+hadoop_cli_install_path: "/usr/local/share/hadoop-cli-{{ hadoop_cli_version }}.{{ hadoop_cli_hadoop_version }}"
+hadoop_cli_jdk_version: 11
+hadoop_cli_user: root
+hadoop_cli_version: 1.0.7

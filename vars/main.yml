@@ -1,0 +1,2 @@
+---
+hadoop_cli_unpack_root: '{{ hadoop_cli_install_path }}/hadoop-cli-{{ hadoop_cli_hadoop_version }}'
