@@ -20,7 +20,7 @@ Installs David Streever's hadoop-cli (https://github.com/dstreev/hadoop-cli)
 | hadoop_cli_dl_uri | https://github.com/dstreev/hadoop-cli/releases/download/{{ hadoop_cli_version }}.{{ hadoop_cli_hadoop_version }}-bin/hadoop-cli-{{ hadoop_cli_version }}-SNAPSHOT-{{ hadoop_cli_hadoop_version }}.tar.gz | URI to download the binary from |
 | hadoop_cli_group | root | Group to own the install |
 | hadoop_cli_hadoop_version | 2.7 | Hadoop version for the hadoop-cli |
-| hadoop_cli_install_path | /usr/local/share/hadoop-cli-{{ hadoop_cli_version }}.{{ | hadoop_cli_hadoop_version }} | Path to install to |
+| hadoop_cli_install_path | /usr/local/share/hadoop-cli-{{ hadoop_cli_version }}.{{ hadoop_cli_hadoop_version }} | Path to install to |
 | hadoop_cli_jdk_version | 11 | JDK version to use |
 | hadoop_cli_user | root | User to own the install |
 | hadoop_cli_version | 1.0.7 | hadoop-cli version to use |
